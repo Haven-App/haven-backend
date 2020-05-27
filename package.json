@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rlew421/haven-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }

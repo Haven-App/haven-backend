@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+app.use(express.static('public'));
+//does this go here?
+const cors = require('cors');
+app.use(cors());
+
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pet Box';
@@ -35,6 +40,8 @@ app.get('/api/v1/shelters/:id', (request, response) => {
   const { id } = request.params;
   //iterates through the shelters data but its singular - like a ruby enumerable w/ pipes
   const shelter = app.locals.shelters.find(shelter => shelter.id === id);
-
+  if (!shelter) {
+    return response.sendStatus(404);
+  }
   response.status(200).json(shelter);
 });
