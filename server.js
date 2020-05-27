@@ -29,6 +29,11 @@ app.locals.shelters = [
   { id: 'c3', name: 'Craisins', type: 'cat' }
 ];
 
+app.get('/', (request, response) => {
+  // response is actually handled by static asset express middleware
+  app.use(express.static('public'));
+});
+
 //get request
 app.get('/api/v1/shelters', (request, response) => {
   const shelters = app.locals.shelters;
