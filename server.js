@@ -27,6 +27,7 @@ app.locals.shelters = [
   { id: 'a1', name: 'Rover', type: 'dog' },
   { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
   { id: 'c3', name: 'Craisins', type: 'cat' }
+  //{test data haha}
 ];
 
 app.get('/', (request, response) => {
