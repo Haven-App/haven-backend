@@ -1,11 +1,37 @@
 require('dotenv').config()
 
 const express = require('express');
+var router = express.Router();
 const app = express();
-app.use(express.static('public'));
+// app.use(express.static('public'));
 //does this go here?
 const cors = require('cors');
 app.use(cors());
+
+
+
+router.get('/', function(req, res){
+  res.render('index', {
+    title: 'Home'
+  });
+});
+
+router.get('/hnow', function(req, res){
+  res.render('hnow', {
+    title: 'Help now'
+  });
+});
+
+router.get('/contact', function(req, res){
+  res.render('contact', {
+    title: 'Contact'
+  });
+});
+
+module.exports = router;
+
+
+
 
 
 app.set('port', process.env.PORT || 3000);

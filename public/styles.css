@@ -1,3 +1,4 @@
+/* ------------------ Universal Stylings ------------------- */
 *,
 *:after,
 *:before {
@@ -11,6 +12,7 @@ body {
   flex-direction: column;
   text-align: center; */
 }
+/* ------------------ Landing Page Layout ------------------- */
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -55,5 +57,18 @@ input {
 }
 button:hover {
   background-color: #B4723B;
+}
 
+/* -------------- Second Page for Help Now Layout ------------- */
+.grid-options {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-rows: 2fr 2fr;
+}
+/* -------------- Overriding Style for Elements ------------- */
+
+.hidden {
+  margin: 0px;
+  height: 0px;
+  width: 0px;
 }
