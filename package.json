@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Haven-App/haven-backend#readme",
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^2.6.1",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
